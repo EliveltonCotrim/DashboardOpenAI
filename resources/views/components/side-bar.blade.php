@@ -1,25 +1,33 @@
 <div x-show="menuVisibility" class="relative z-40 md:hidden" role="dialog" aria-modal="true">
 
-    <div x-show="menuVisibility" @click="menuVisibility = false"
-        x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300"
-        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    <div x-show="menuVisibility" x-on:click="menuVisibility = false"
+        x-transition:enter="transition-opacity ease-linear duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition-opacity ease-linear duration-300"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
         class="fixed inset-0 bg-gray-600 bg-opacity-75">
     </div>
 
     <div class="fixed inset-0 z-40 flex">
-
-        <div x-show="menuVisibility" @click.outside="menuVisibility = false"
+        <div x-show="menuVisibility" x-on:click.outside="menuVisibility = false"
             x-transition:enter="transition ease-in-out transform duration-300"
-            x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
-            x-transition:leave="transition ease-in-out transform duration-300" x-transition:leave-start="translate-x-0"
+            x-transition:enter-start="-translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in-out transform duration-300"
+            x-transition:leave-start="translate-x-0"
             x-transition:leave-end="-translate-x-full"
             class="relative flex flex-col flex-1 w-full max-w-xs pt-5 pb-4 bg-gray-800">
-            <div x-show="menuVisibility" x-transition:enter="transition-opacity ease-linear duration-300"
-                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-                x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100"
+
+            <div x-show="menuVisibility"
+                x-transition:enter="transition-opacity ease-linear duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition-opacity ease-linear duration-300"
+                x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0" class="absolute top-0 right-0 pt-2 -mr-12">
-                <button @click="menuVisibility = false" type="button"
+                <button x-on:click="menuVisibility = false" type="button"
                     class="flex items-center justify-center w-10 h-10 ml-1 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
