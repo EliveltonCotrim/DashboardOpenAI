@@ -17,6 +17,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    @stack('customer-scripts')
 </head>
 
 <body class="min-h-screen">
@@ -34,7 +35,8 @@
         </div>
     </div>
 
-    @livewireScripts
+    {{-- @livewireScripts --}}
+    @livewireScriptConfig
 </body>
 
 </html>

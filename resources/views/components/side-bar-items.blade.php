@@ -1,6 +1,6 @@
 <nav class="flex-1 px-2 py-4 space-y-1">
-    <a href="#" class="flex items-center px-2 py-2 text-sm font-medium text-white {{ Route::is('dashboard.*') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md group">
-        <svg class="flex-shrink-0 w-6 h-6 mr-3 {{ Route::is('clients.*') ? 'text-gray-300' : 'text-gray-400 group-hover:text-gray-300'}}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <a href="{{ route('dashboard') }}" class="flex items-center px-2 py-2 text-sm font-medium {{ Route::is('dashboard') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md group">
+        <svg class="flex-shrink-0 w-6 h-6 mr-3 {{ Route::is('dashboard') ? 'text-gray-300' : 'text-gray-400 group-hover:text-gray-300'}}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
         </svg>
         Dashboard
